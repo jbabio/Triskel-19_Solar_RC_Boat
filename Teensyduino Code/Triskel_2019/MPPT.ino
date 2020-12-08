@@ -34,6 +34,7 @@ void MPPT_PO()
     //Mean value for volts and amps to get a stable reading.
     if ( read_count < READS_PER_SAMPLE )
       {
+      read_count++;
       mean_volts += volts / READS_PER_SAMPLE ;
       mean_amps += amps / READS_PER_SAMPLE ;
       Serial.print("Volts & Amps Sample #");
